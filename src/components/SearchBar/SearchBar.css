@@ -1,0 +1,23 @@
+/* .SearchBar-wrapper {
+} */
+
+.search-beer-input {
+  /* display: block; */
+  width: 82%;
+  height: 0px;
+  padding: 38px;
+  font-size: 20px;
+  background-color: #e53b47;
+  border: 0;
+  color: white;
+  margin-top: 35px;
+  margin-left: 34px;
+}
+
+.search-beer-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-beer-input:focus {
+  outline: 0;
+}

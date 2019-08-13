@@ -1,5 +1,6 @@
 import React from "react";
 import punkLogo from "../../src/punk_logo.svg";
+import SearchBar from "../components/SearchBar/SearchBar";
 
 import "./Header.css";
 
@@ -21,6 +22,7 @@ const Header = () => {
         <a>
           <img className="punkLogo" src={punkLogo} alt="punkLogo" />
         </a>
+        <SearchBar />
       </div>
     </div>
   );
