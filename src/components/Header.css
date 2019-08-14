@@ -41,7 +41,7 @@ hr {
   transition: all 0.5s cubic-bezier(0.95, -0.6, 0.73, 1.73);
   transform: rotateY(270deg) translateX(-20px);
   transform-origin: center right;
-
+  padding: 16px;
   width: 40px;
 }
 
