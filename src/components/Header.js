@@ -19,7 +19,7 @@ const Header = () => {
       </div>
 
       <div>
-        <a>
+        <a href="https://punkapi.com">
           <img className="punkLogo" src={punkLogo} alt="punkLogo" />
         </a>
         <SearchBar />
