@@ -1,39 +1,44 @@
 import React, { Component } from "react";
-import { PATH_BASE, PATH_RANDOM, PATH_BEER } from "../../api/api";
+import { PATH_BASE, PATH_BEER } from "../../api/api";
+import List from "../../components/List/List";
 
 import "./Main.css";
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
-      randomBeers: {}
+      Beers: []
     };
   }
 
-  componentDidMount = () => {
-    this.getRandomBeers();
-  };
-
-  getRandomBeers = () => {
-    fetch(`${PATH_BASE}${PATH_BEER}${PATH_RANDOM}`)
+  componentDidMount() {
+    fetch(`${PATH_BASE}${PATH_BEER}`)
       .then(response => response.json())
-      .then(randomBeers => this.setRandomBeers(randomBeers));
-  };
+      .then(data => {
+        this.setState({ Beers: data });
+        console.log(this.state);
+      });
+  }
 
-  setRandomBeers = randomBeers => {
-    this.setState({
-      randomBeers: randomBeers
-    });
+  // setBeers = Beers => {
+  //   this.setState({
+  //     Beers: Beers
+  //   });
 
-    console.log(this.state);
-  };
+  // };
 
   render() {
+    // const { Beers } = this.state.Beers;
+    // const { results } = Beers;
+    // console.log({ Beers, results });
+
     return (
       <div>
-        <h1 className="App-main-title">{this.props.title}</h1>
+        {this.state.Beers.map((item, key) => (
+          <List item={item} key={item.id} />
+        ))}
       </div>
     );
   }

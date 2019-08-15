@@ -15,11 +15,10 @@ class App extends Component {
             <Sidebar />
           </div>
           <div className="App-content-wrapper">
-            <h1 className="App-main-title">Random Beers </h1>
+            <h1 className="App-main-title">All Beers </h1>
+            <Main title="randomBeers" />
           </div>
         </div>
-
-        <Main title="randomBeers" />
       </div>
     );
   }

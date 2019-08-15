@@ -8,7 +8,7 @@ const Sidebar = () => {
       <ul className="sidebar-menu">
         <li className="sidebar-menu__item">
           <a href="/" className="is-active">
-            Random
+            Home
           </a>
         </li>
         <li className="sidebar-menu__item">
