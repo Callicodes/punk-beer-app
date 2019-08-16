@@ -22,7 +22,7 @@ const Header = () => {
         <a href="https://punkapi.com">
           <img className="punkLogo" src={punkLogo} alt="punkLogo" />
         </a>
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
     </div>
   );

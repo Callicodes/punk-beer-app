@@ -11,12 +11,12 @@ const Sidebar = () => {
             Home
           </a>
         </li>
-        <li className="sidebar-menu__item">
+        {/* <li className="sidebar-menu__item">
           <a href="/top-rated">Top Rated</a>
         </li>
         <li className="sidebar-menu__item">
           <a href="/coming-soon">Coming soon</a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

@@ -1,25 +1,26 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
-import Main from "./components/Main/Main";
-import Sidebar from "./components/Sidebar/Sidebar";
+// import Main from "./components/Main/Main";
+// import Sidebar from "./components/Sidebar/Sidebar";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import NotFound from "./components/NotFound/NotFound";
+import Beer from "../src/Beer/Beer";
+import Home from "../src/Home/Home";
+// import List from "./components/List/List";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
         <Header />
-        <div className="App-main">
-          <div className="App-sidebar-wrapper">
-            <Sidebar />
-          </div>
-          <div className="App-content-wrapper">
-            <h1 className="App-main-title">All Beers </h1>
-            <Main title="randomBeers" />
-          </div>
-        </div>
-      </div>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/:beerId" component={Beer} exact />
+          <Route component={NotFound} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

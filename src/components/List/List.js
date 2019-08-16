@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 
 import "./List.css";
 
@@ -7,13 +8,19 @@ class List extends Component {
     return (
       <div className="list-container">
         <div className="list-container__item">
-          <div className="list__movie-image">
-            <span className="list__movie-vote-average">
-              {this.props.item.tagline}
+          <div>
+            <span className="list__beer-first-brewed">
+              {this.props.item.name}
+              <p>{this.props.item.beer_abv}</p>/
             </span>
-            <img sr={this.props.item.image_url} alt={this.props.item.name} />
+            <div>
+              <img
+                src={this.props.item.image_url}
+                alt={this.props.item.name}
+                className="list__beer-image"
+              />
+            </div>
           </div>
-          <div className="list__movie-title">{this.props.item.name}</div>
         </div>
       </div>
     );
