@@ -26,5 +26,6 @@ class List extends Component {
     );
   }
 }
+
 // console.log("wtf");
 export default List;

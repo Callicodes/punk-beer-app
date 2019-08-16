@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { PATH_BASE, PATH_BEER } from "../../api/api";
 import List from "../../components/List/List";
+import BeerThumb from "../../components/BeerThumb/BeerThumb";
 
 import "./Main.css";
 
@@ -35,11 +36,32 @@ class Main extends Component {
     // console.log({ Beers, results });
 
     return (
-      <div>
-        {this.state.Beers.map((item, key) => (
-          <List item={item} key={item.id} />
-        ))}
-      </div>
+      <React.Fragment>
+        {/* <div>
+          {this.state.Beers.map((item, key) => (
+            <List
+              item={item}
+              key={item.id}
+              clickable={true}
+              image={item.image_url}
+              beerId={item.id}
+              beerName={item.name}
+            />
+          ))}
+        </div> */}
+        <div>
+          {this.state.Beers.map((item, key) => (
+            <BeerThumb
+              item={item}
+              key={item.id}
+              clickable={true}
+              image={item.image_url}
+              beerId={item.id}
+              beerName={item.name}
+            />
+          ))}
+        </div>
+      </React.Fragment>
     );
   }
 }

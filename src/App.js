@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
 import Beer from "../src/Beer/Beer";
 import Home from "../src/Home/Home";
+
 // import List from "./components/List/List";
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
         <Header />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/:beerId" component={Beer} exact />
+          {/* <Route path="/:beerId" component={Beer} exact /> */}
+          <Route path="/beer/:id" component={Beer} exact />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
