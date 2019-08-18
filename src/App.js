@@ -15,13 +15,15 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          {/* <Route path="/:beerId" component={Beer} exact /> */}
-          <Route path="/beer/:id" component={Beer} exact />
-          <Route component={NotFound} />
-        </Switch>
+        <React.Fragment>
+          <Header />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            {/* <Route path="/:beerId" component={Beer} exact /> */}
+            <Route path="/:beerid" component={Beer} exact />
+            <Route component={NotFound} />
+          </Switch>
+        </React.Fragment>
       </BrowserRouter>
     );
   }

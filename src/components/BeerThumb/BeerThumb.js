@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const BeerThumb = props => {
   return (
-    <div className="rmdb-moviethumb">
+    <div className="rmdb-beerthumb">
       {props.clickable ? (
-        <Link to={{ pathname: `/beer/:Id`, beerName: `${props.beerName}` }}>
+        <Link to={{ pathname: `/beer/:id`, beerName: `${props.beerName}` }}>
           <img src={props.image} alt="beerthumb" />
         </Link>
       ) : (
