@@ -7,7 +7,7 @@ import "../Beer/Beer.css";
 
 class Beer extends Component {
   state = {
-    beer: {}
+    beer: [{}]
   };
   componentDidMount() {
     //first fetch the beer..
@@ -30,10 +30,14 @@ class Beer extends Component {
 
   render() {
     return (
-      <div>
-        <Navigation />
-        <BeerInfo />
-        <BeerInfoBar />
+      <div className="bdb-beer">
+        {this.state.beer ? (
+          <div>
+            <Navigation beer={this.props.location.beerName} />
+            <BeerInfo beer={this.state.beer} />
+            <BeerInfoBar beer={this.state.beer} />
+          </div>
+        ) : null}
       </div>
     );
   }

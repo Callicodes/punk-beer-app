@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 const BeerThumb = props => {
   return (
     <div className="rmdb-beerthumb">
+      <p>{props.beerName}</p>
       {props.clickable ? (
         <Link
           to={{ pathname: `/${props.beerId}`, beerName: `${props.beerName}` }}
         >
-          <img src={props.image} alt="beerthumb" />
+          <img clasName="bdb-beerimg" src={props.image} alt="beerthumb" />
         </Link>
       ) : (
         <img src={props.image} alt="beerthumb" />
