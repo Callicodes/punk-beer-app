@@ -11,11 +11,11 @@ const BeerThumb = props => (
         to={{ pathname: `/${props.beerId}`, beerName: `${props.beerName}` }}
       >
         <img className="bdb-beering" src={props.image} alt="beerthumb" />
+        <button className="bdb-bearing">More Details....</button>
       </Link>
     ) : (
       <img src={props.image} alt="beerthumb" />
     )}
-    <nbsp />
   </div>
 );
 
