@@ -6,7 +6,9 @@ const BeerThumb = props => {
   return (
     <div className="rmdb-beerthumb">
       {props.clickable ? (
-        <Link to={{ pathname: `/beer/:id`, beerName: `${props.beerName}` }}>
+        <Link
+          to={{ pathname: `/${props.beerId}`, beerName: `${props.beerName}` }}
+        >
           <img src={props.image} alt="beerthumb" />
         </Link>
       ) : (
