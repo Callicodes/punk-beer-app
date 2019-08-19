@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
 import Beer from "../src/Beer/Beer";
+import BeerInfo from "./components/BeerInfo/BeerInfo";
 import Home from "../src/Home/Home";
 
 // import List from "./components/List/List";

@@ -17,13 +17,13 @@ const BeerInfo = props => {
     <div
       className="bdb-beerInfo"
       style={{
-        background: props.image_url ? props.image_url : "black"
+        background: props.beer ? props.beer : "black"
       }}
     >
       <div className="bdb-beerInfo-content">
         <div className="bdb-beerInfo-thumb">
           <BeerThumb
-            image={props.image_url ? props.image_url : "black"}
+            image={props.beer ? props.beer : "black"}
             clickable={false}
           />
 

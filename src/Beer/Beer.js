@@ -35,7 +35,7 @@ class Beer extends Component {
           <div>
             <Navigation beer={this.props.location.beerName} />
             <BeerInfo beer={this.state.beer} />
-            <BeerInfoBar beer={this.state.beer} />
+            <BeerInfoBar beer={this.state.beer.image_url} />
           </div>
         ) : null}
       </div>
